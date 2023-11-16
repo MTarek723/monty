@@ -40,10 +40,10 @@ if (!found)
 { fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 fclose(file);
 free(opcode);
-free(stack);
+free_stack(stack);
 exit(EXIT_FAILURE); }
 line_number++; }
 fclose(file);
 free(opcode);
-free(stack);
+free_stack(stack);
 return (0); }
