@@ -7,6 +7,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdarg.h>
+extern FILE *file;
+extern char *opcode;
+FILE *file;
+char *opcode;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,8 +43,6 @@ typedef struct instruction_s
 
 #define MAX_OPCODE_LENGTH 100
 extern stack_t *head;
-extern FILE *file;
-extern char *opcode;
 void nop(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);

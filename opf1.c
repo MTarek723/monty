@@ -1,6 +1,4 @@
 #include "monty.h"
-extern FILE *file;
-extern char *opcode;
 /**
  * push - pushes an element onto the stack
  * @stack: pointer to the stack

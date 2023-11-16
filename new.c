@@ -1,6 +1,4 @@
 #include "monty.h"
-extern FILE *file;
-extern char *opcode;
 /**
  * main - Entry point
  * @argc: arguments count
@@ -11,6 +9,7 @@ int main(int argc, char *argv[])
 {
 stack_t *stack = NULL;
 int found, i;
+FILE *file;
 char *opcode = malloc(MAX_OPCODE_LENGTH);
 unsigned int line_number = 1;
 instruction_t instructions[] = {
