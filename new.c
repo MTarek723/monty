@@ -6,8 +6,7 @@
  * Return: 0
 */
 int main(int argc, char *argv[])
-{
-stack_t *stack = NULL;
+{ stack_t *stack = NULL;
 int found, i;
 FILE *file;
 char *opcode = malloc(MAX_OPCODE_LENGTH);
@@ -33,7 +32,8 @@ found = 0;
 for (i = 0; instructions[i].opcode != NULL; i++)
 {
 if (strcmp(opcode, instructions[i].opcode) == 0)
-{ instructions[i].f(&stack, line_number);
+{ set_shared(file, opcode);
+instructions[i].f(&stack, line_number);
 found = 1;
 break; } }
 if (!found)

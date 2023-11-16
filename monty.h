@@ -48,5 +48,7 @@ void pop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 void div_op(stack_t **stack, unsigned int line_number);
 void mul_op(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t *head);
 void mod_op(stack_t **stack, unsigned int line_number);
+void set_shared(FILE* f, char* op);
 #endif
