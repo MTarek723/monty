@@ -36,7 +36,6 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
 #define MAX_OPCODE_LENGTH 100
 extern stack_t *head;
 void nop(stack_t **stack, unsigned int line_number);
